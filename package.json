@@ -1,0 +1,10 @@
+{
+  "name": "notion-example",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/test.js",
+  "dependencies": {
+    "@notionhq/client": "^0.4.11"
+  }
+}

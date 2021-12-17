@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  python:
+    build:
+      context: ./local_dev/python
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+        gitcommithash: 1325
+      labels:
+        com.abbymalson.description: "localdev"
+    volumes:
+      - ${PWD}:/code
+    env_file:
+      - local_dev/python/_env
+
+  node:
+    build:
+      context: ./local_dev/node
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+        gitcommithash: 1325
+      labels:
+        com.abbymalson.description: "localdev"
+    volumes:
+      - ${PWD}:/code
+    env_file:
+      - local_dev/node/_env
+
